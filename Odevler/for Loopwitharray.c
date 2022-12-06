@@ -1,38 +1,25 @@
 // For loop with 2D array myarray[2][2]
-
-// without for loop 
-
-#include "stdio.h"
+#include<stdio.h>
 int main(){
-    int myarray[2][2] ={
-            {1,2},
-            {3,4}
-    };
-    printf("myarray[0][0]=%d\n",myarray[0][0]);
-    printf("myarray[0][1]=%d\n",myarray[0][1]);
-    printf("myarray[1][0]=%d\n",myarray[1][0]);
-    printf("myarray[1][1]=%d\n",myarray[1][1]);
-    return 0;
-}
+   
+   int display[4][4];
+   
+   int i, j;
+   for(i=0; i<4; i++) {
+      for(j=0;j<4;j++) {
+         printf("Enter value for display[%d][%d]:", i, j);
+         scanf("%d", &display[i][j]);
+      }
+   }
 
-############################################################
-
-// with for loop 
-
-
-#include "stdio.h"
-
-int main(){
-    int myarray[2][2]= {
-            {1,2},
-            {3,4}
-    };
-   int i,j;
-    for(i=0;i<2;i++){
-        for(j=0;j<2;j++){
-            printf("%d",myarray[i][j]);
-        }
-        printf("\n");
-    }
-    return 0;
+   printf("two dim array elem:\n");
+   for(i=0; i<4; i++) {
+      for(j=0;j<4;j++) {
+         printf("%d ", display[i][j]);
+         if(j==3){
+            printf("\n");
+         }
+      }
+   }
+   return 0;
 }
